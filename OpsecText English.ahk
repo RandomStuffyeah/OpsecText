@@ -10,6 +10,8 @@ Menu, FileMenu, Add, E&xit, FileExit
 Menu, HelpMenu, Add, &About, HelpAbout
 Menu, HelpMenu, Add, &License, HelpLicense
 Menu, MiscMenu, Add, &GitHub Repo, MiscSource
+Menu, MiscMenu, Add, &Input License Key, MiscKey
+Menu, MiscMenu, Add, Activate, MiscActivate
 Menu, MiscMenu, Add, &Open Welcome file, MiscWelcome
 
 ; Attach the menu bar
@@ -23,7 +25,7 @@ Gui, Menu, menu
 ; Create GUI + window
 Gui, +Resize  ; Make the window resizable.
 Gui, Add, Edit, vMainEdit WantTab W600 R20
-Gui, Show,, Untitled - Zdrmonster World
+Gui, Show,, Zdrmonster World
 CurrentFileName := ""  ; Indicate that there is no current file.
 return
 
@@ -125,6 +127,16 @@ ExitApp
 
 MiscSource:
 Run, https://github.com/RandomStuffyeah/OpsecText
+return
+
+MiscKey:
+GuiControl,, MainEdit, Enter anything below this and we'll activate for you:  ; Put the text into the control.
+Gui, Show,, Zdrmonster World   ; Show file name in title bar.
+return
+
+MiscActivate:
+MsgBox We forgot to activate, we sent your info to Microshaft!
+return
 
 MiscWelcome:
 GuiControl,, MainEdit, Zdrmonster World is the best Microsoft Word bootleg, It is written in AutoHotkey and is licensed under the GNU General Public License, See Help > License for more information.  ; Put the text into the control.
