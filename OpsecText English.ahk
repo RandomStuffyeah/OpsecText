@@ -23,7 +23,7 @@ Gui, Menu, menu
 ; Create GUI + window
 Gui, +Resize  ; Make the window resizable.
 Gui, Add, Edit, vMainEdit WantTab W600 R20
-Gui, Show,, Untitled - OpsecText
+Gui, Show,, Untitled - Zdrmonster World
 CurrentFileName := ""  ; Indicate that there is no current file.
 return
 
@@ -48,7 +48,7 @@ if ErrorLevel
 }
 GuiControl,, MainEdit, %MainEdit%  ; Put the text into the control.
 CurrentFileName := SelectedFileName
-Gui, Show,, %CurrentFileName% - OpsecText   ; Show file name in title bar.
+Gui, Show,, %CurrentFileName% - Zdrmonster World   ; Show file name in title bar.
 return
 
 FileSave:
@@ -125,7 +125,7 @@ GuiClose:  ; User closed the window.
 ExitApp
 
 MiscSource:
-Run, https://github.com/DESKTOPGOOOSE/OpsecText
+Run, https://github.com/RandomStuffyeah/OpsecText
 
 MiscWelcome:
 GuiControl,, MainEdit, OpsecText is a free and lightweight text editor, It is written in AutoHotkey and is licensed under the GNU General Public License, See Help > License for more information.  ; Put the text into the control.
