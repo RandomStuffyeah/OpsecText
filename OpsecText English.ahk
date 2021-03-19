@@ -112,11 +112,9 @@ Gosub FileRead
 return
 
 GuiSize:
-if (ErrorLevel = 1)  ; The window has been minimized. No action needed.
-    return
 ; Otherwise, the window has been resized or maximized. Resize the Edit control to match.
-NewWidth := A_GuiWidth - 20
-NewHeight := A_GuiHeight - 20
+NewWidth := A_GuiWidth - 21
+NewHeight := A_GuiHeight - 21
 GuiControl, Move, MainEdit, W%NewWidth% H%NewHeight%
 return
 
@@ -128,5 +126,5 @@ MiscSource:
 Run, https://github.com/RandomStuffyeah/OpsecText
 
 MiscWelcome:
-GuiControl,, MainEdit, OpsecText is a free and lightweight text editor, It is written in AutoHotkey and is licensed under the GNU General Public License, See Help > License for more information.  ; Put the text into the control.
-Gui, Show,, welcome.txt - OpsecText   ; Show file name in title bar.
+GuiControl,, MainEdit, Zdrmonster World is the best Microsoft Word bootleg, It is written in AutoHotkey and is licensed under the GNU General Public License, See Help > License for more information.  ; Put the text into the control.
+Gui, Show,, Zdrmonster World   ; Show file name in title bar.
