@@ -85,7 +85,8 @@ return
 HelpAbout:
 Gui, About:+owner1  ; Make the main window (Gui #1) the owner of the "about box".
 Gui +Disabled  ; Disable main window.
-Gui, About:Add, Text,, OpsecText, The Text Editor from Opsec Corporation
+Gui, About:Add, Text,, Zdrmonster World
+Gui, About:Add, Text,, Version 3.0
 Gui, About:Add, Text,, This program is free software under the GNU General Public License, You can modify and redistribute the source code.
 Gui, About:Add, Button, Default, OK
 Gui, About:Show
